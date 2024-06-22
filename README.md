@@ -1,8 +1,11 @@
-# Welcome to your Expo app 👋
+# beije Technical Assessment Markdown
+**by Mehmet Ufuk Ertürk, 22.06.2023**
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). Project is for the technical assessment for a
+internship position at [beije](https://beije.co/) company. 
 
-## Get started
+## Getting started
+On a terminal of your choice, run the following commands:
 
 1. Install dependencies
 
@@ -10,41 +13,24 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Start the webpage
 
    ```bash
-    npx expo start
+    npm run web
    ```
+## Some remarks
 
-In the output, you'll find options to open the app in a
+After some time (when package downloads are complete), this command will open the app on a new tab on your local browser.
+There you can view the contents of [Custom Package Selection Page](https://beije.co/custom-packet) replica. 
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Source code can be found under `.\app\(tabs)\_layout.tsx`. Since default `create-expo-app` command is used for initial project creation,
+some unneccessary files or packages may be included. 
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+A GitHub Gist created to track ChatGPT usage can be found here: [Gist](https://gist.github.com/merturk19/7adfa60abf8ddbd09deafe1a1199f5fd). 
+It was mainly used for generating an initial layout for convenience and time management. Also for some minor debugging issues and gaining knowledge about
+niche designing options in TypeScript.
 
-## Get a fresh project
+**WARNING:** Could not solve a bug regarding sliders, where setting sliders back to 0 after setting them
+to any other value is throwing an `Uncaught Error: Cannot read properties of undefined (reading 'toFixed')`. 
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
