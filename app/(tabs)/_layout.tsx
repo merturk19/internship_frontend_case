@@ -11,11 +11,12 @@ const App = () => {
     const [miniTampon, setMiniTampon] = useState(0);
     const [standardTampon, setStandardTampon] = useState(0);
     const [superTampon, setSuperTampon] = useState(0);
-    const [selectedTab, setSelectedTab] = useState('beije Ped');
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [selectedTab, setSelectedTab] = useState('beije Ped'); //initially selected tab
+    const [totalPrice, setTotalPrice] = useState(0); //initially no product is selected, so total cost is set to 0
     const [showModal, setShowModal] = useState(false);
     const [message, setMessage] = useState('');
 
+    //calculated unit prices for products from original page
     const standardPadPrice = 6.084;
     const superPadPrice = 7.140;
     const superPlusPadPrice = 8.003;
@@ -25,10 +26,10 @@ const App = () => {
     const standardTamponPrice = 8.488;
     const superTamponPrice = 8.974;
 
+    //functions necessary for realtime cost calculation
     useEffect(() => {
         calculateCost();
     }, [standardPad, superPad, superPlusPad, dailyPad, superDailyPad, miniTampon, standardTampon, superTampon]);
-
 
     const calculateCost = () => {
         setTotalPrice(
@@ -43,6 +44,7 @@ const App = () => {
         );
     };
 
+    //functions necessary for prompting message after products are added to cart
     const showSuccessMessage = () => {
         setMessage('Ürünleriniz sepete eklendi');
         setShowModal(true);
